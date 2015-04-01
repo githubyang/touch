@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="cleartype" content="on" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>touch demo</title>
+  <style>
+    html,body{font-family:Arial,sans-serif;line-height:1.5rem;font-size:16px;color:#333;margin:0;padding:0;}
+    #box{width:100%;height:400px;}
+    #e{width:200px;height:200px;background:#39f;margin:0 auto;position:relative;top:50px;-webkit-transition:-webkit-transform 500ms ease-in-out;}
+    </style>
+</head>
+<body>
+  <h1>touch demo - tap</h1>
+  <div id="box">
+    <div id="e"></div>
+  </div>    
+  <script type="text/javascript" src="./touch.js"></script>
+  <script>
+    var uid=0;
+    touch.tap('#e',function(e){
+      uid+=90;
+      this.style.webkitTransform='rotateZ('+uid+'deg)';
+    });
+  </script>
+</body>
+</html>
